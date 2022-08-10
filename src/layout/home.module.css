@@ -1,0 +1,41 @@
+.header {
+    height: 40vh;
+    background:url("../assets/pexels-rafael-guajardo-604684.jpg") no-repeat no-repeat;
+    position:relative;
+}
+
+.shade {
+    height: 100% !important;
+    background-color: rgba(0, 0, 70, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding:1rem !important;
+    background-color: #fff !important;
+    border: 0 solid transparent !important;
+    width: 60% !important;
+    position: absolute !important;
+    top:90%;
+    left:20%;
+}
+
+.input::focus {
+    border: none !important
+}
+
+.fab {
+    float: right !important;
+    margin:10px !important;
+}
+
