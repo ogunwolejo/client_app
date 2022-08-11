@@ -25,8 +25,8 @@ const HomePage:React.FC<{children:React.ReactNode, getSearchName:Function}> = ({
                 </Box>
             </Grid>
 
-            <Grid container xs={12} sm={12}  className={`${classes.list_wrapper}`}>
-                <Grid item sx={{backgroundColor: '#e8e8e8', width:'100%', py:3}}>
+            <Grid container  className={`${classes.list_wrapper}`}>
+                <Grid item xs={12} sm={12} sx={{backgroundColor: '#e8e8e8', width:'100%', py:3}}>
                     {children}
                 </Grid>
             </Grid>

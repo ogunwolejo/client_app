@@ -14,7 +14,7 @@ const CardContainer: React.FC<{name:string, gender:string, loading:boolean, stat
 
     const FirstLetterInName = name[0].toUpperCase();
     return (
-       <Grid container xs={12} sm={4} md={3} lg={2} mx={2} sx={{}}>
+       <Grid item xs={12} sm={4} md={3} lg={2} mx={2}>
            <Card sx={{my:1, width:'100%'}}>
                {
                    !loading ? (
@@ -33,7 +33,7 @@ const CardContainer: React.FC<{name:string, gender:string, loading:boolean, stat
                            }
                        />
                    ) : (
-                        <div>loading</div>
+                        null
                    )
                }
            </Card>

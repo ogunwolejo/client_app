@@ -59,7 +59,7 @@ const HomePageWrapper = () => {
     return(
     <HomePage getSearchName={getSearchName}>
         <Box  sx={{ width:'100%', mt:5}}>
-            <Grid container sx={{}}>
+            <Grid container>
                 {
                     loading ? (
                         <div style={{height:'auto', width:'100%', padding:'5px', display:'flex', justifyContent:'center', alignItems:'center'}}>

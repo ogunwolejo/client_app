@@ -34,7 +34,7 @@ const PersonPageWrapper = () => {
 
     return (
         <PersonPage >
-            <Grid container xs={12}  sx={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+            <Grid container  sx={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                 <Container  sx={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                     {loading ? (<div style={{height:'auto', width:'50%', padding:'5px', display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <RingLoader color={red[200]} loading={loading}  size={150} />
