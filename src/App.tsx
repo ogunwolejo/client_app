@@ -12,7 +12,6 @@ export const client = new ApolloClient({
 
 })
 
-console.log(REACT_APP_URL);
 
 const App = () => {
     return (

@@ -8,8 +8,11 @@ import useSearch from "../hooks/useSearch";
 import {gql} from "graphql-tag";
 import usePaginate from "../hooks/usePaginate";
 
+import {RingLoader} from 'react-spinners'
+import {red} from '@mui/material/colors';
 
-const list:Array<PeopleType> = [{name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'},{name:'joshu', gender:'male'},];
+
+//const list:Array<PeopleType> = [{name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'}, {name:'joshu', gender:'male'},{name:'joshu', gender:'male'},];
 
 interface PeopleType {
     name:string,
@@ -58,17 +61,25 @@ const HomePageWrapper = () => {
         <Box  sx={{ width:'100%', mt:5}}>
             <Grid container sx={{}}>
                 {
-                    people.map((el:PeopleType, i:number) => {
-                        return(
-                            <CardContainer key={i} name={el.name} gender={el.gender} loading={context.loading} state={people}/>
+                    loading ? (
+                        <div style={{height:'auto', width:'100%', padding:'5px', display:'flex', justifyContent:'center', alignItems:'center'}}>
+                            <RingLoader color={red[200]} loading={loading}  size={150} />
+                        </div>
+                    ) : (
+
+                        people.map((el: PeopleType, i: number) => {
+                            return (
+                                <CardContainer key={i} name={el.name} gender={el.gender} loading={context.loading}
+                                               state={people}/>
+                            )
+                        })
                         )
-                    })
                 }
 
 
             </Grid>
             <Container sx={{my:4, display:'flex', flexDirection:'column',alignItems:'center'}}>
-                <Pagination count={8} size="large" onClick={(e:any) => setPagePagination(e.target.innerText)} />
+                {!loading && <Pagination count={8} size="large" onClick={(e:any) => setPagePagination(e.target.innerText)} /> }
             </Container>
         </Box>
     </HomePage>)
