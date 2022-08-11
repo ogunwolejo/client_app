@@ -23,8 +23,9 @@ const PersonPageWrapper = () => {
         variables: {search:id}
     });
 
+
     useEffect(() => {
-        !loading &&  data;
+        !loading &&  console.log(data);
     }, [loading, data])
 
 
