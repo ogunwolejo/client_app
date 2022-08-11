@@ -9,6 +9,7 @@ const {REACT_APP_URL} = process.env;
 export const client = new ApolloClient({
     uri: REACT_APP_URL,
     cache: new InMemoryCache(),
+
 })
 
 console.log(REACT_APP_URL);
