@@ -58,7 +58,7 @@ const HomePageWrapper = () => {
 
     return(
     <HomePage getSearchName={getSearchName}>
-        <Box  sx={{ width:'100%', mt:5}}>
+        <Box  sx={{ width:'100%', mt:5 }}>
             <Grid container>
                 {
                     loading ? (
@@ -66,7 +66,6 @@ const HomePageWrapper = () => {
                             <RingLoader color={red[200]} loading={loading}  size={150} />
                         </div>
                     ) : (
-
                         people.map((el: PeopleType, i: number) => {
                             return (
                                 <CardContainer key={i} name={el.name} gender={el.gender} loading={context.loading}
