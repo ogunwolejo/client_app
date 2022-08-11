@@ -18,24 +18,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 10 !important;
 }
 
 .input {
-    padding:1rem !important;
+    padding:1.5rem !important;
     background-color: #fff !important;
     border: 0 solid transparent !important;
     width: 60% !important;
     position: absolute !important;
-    top:90%;
+    top:92%;
     left:20%;
 }
 
-.input::focus {
+.input:focus, .input:active, .input::after {
     border: none !important
 }
 
 .fab {
     float: right !important;
     margin:10px !important;
+}
+
+.list_wrapper {
+    height: auto;
 }
 

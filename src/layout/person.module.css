@@ -1,0 +1,8 @@
+.container {
+    height:40vh;
+    background-color: darkblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

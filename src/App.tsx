@@ -1,14 +1,25 @@
 import React from 'react';
-import './App.css';
-import HomePage from "./layout/home.page";
+import './App.module.css';
+import RouterWrapper from "./routes/router";
+import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
+import {QueryContextProvider} from "./store/store";
 
+const {REACT_APP_URL} = process.env;
 
+export const client = new ApolloClient({
+    uri: REACT_APP_URL,
+    cache: new InMemoryCache(),
+})
+
+console.log(REACT_APP_URL);
 
 const App = () => {
     return (
-        <HomePage>
-            <div>children</div>
-        </HomePage>
+        <ApolloProvider client={client}>
+            <QueryContextProvider>
+                <RouterWrapper/>
+            </QueryContextProvider>
+        </ApolloProvider>
     )
 }
 export default App;
